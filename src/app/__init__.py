@@ -19,9 +19,9 @@ def create_app():
     def hello():
         return 'Hello, World!'
     
-    app.register_blueprint(auth_bp, url_prefix='/auth')
-    app.register_blueprint(book_bp, url_prefix='/book')
-    app.register_blueprint(post_bp, url_prefix='/post')
-    app.register_blueprint(reply_bp, url_prefix='/reply')
+    app.register_blueprint(auth_bp, url_prefix='/api/v1/auth')
+    app.register_blueprint(book_bp, url_prefix='/api/v1/book')
+    app.register_blueprint(post_bp, url_prefix='/api/v1/post')
+    app.register_blueprint(reply_bp, url_prefix='/api/v1/reply')
     
     return app
