@@ -4,6 +4,7 @@ from app.routes.auth_routes import auth_bp
 from app.routes.book_routes import book_bp
 from app.routes.post_routes import post_bp
 from app.routes.reply_routes import reply_bp
+from app.routes.home_routes import home_bp
 
 
 def create_app():
