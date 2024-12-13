@@ -9,7 +9,7 @@ flask run
 
 ```
 # for Windows
-set FLASK_APP=src/app
+set FLASK_APP=src/app.py
 
 flask run
 ```
