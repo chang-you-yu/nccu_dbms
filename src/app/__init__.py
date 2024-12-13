@@ -5,7 +5,7 @@ from app.routes.book_routes import book_bp
 from app.routes.post_routes import post_bp
 from app.routes.reply_routes import reply_bp
 from app.routes.home_routes import home_bp
-
+from . import database
 
 def create_app():
     # create and configure the app
@@ -15,6 +15,8 @@ def create_app():
     #     DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
     # )
 
+    app.config['DATABASE'] = 'database.db'
+    database.init_app(app)
     # a simple page that says hello
     @app.route('/hello')
     def hello():
